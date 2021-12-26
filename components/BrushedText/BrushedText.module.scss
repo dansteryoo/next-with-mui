@@ -1,0 +1,36 @@
+@import "styles/_mixins";
+@import "styles/_variables";
+
+.BrushedText {
+  z-index: 0 !important;
+  position: relative;
+  display: inline-block;
+  @include maxContent;
+  padding: 0 1rem;
+  margin: 0 -1rem 0 -1rem;
+  @media only screen and (max-width: 900px) {
+    padding: 0 0.5rem;
+    margin: 0 -0.5rem 0 -0.5rem;
+  }
+  .BrushedText__text {
+    display: inline-block;
+    position: relative;
+    color: $tilt-purple;
+  }
+  img {
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    right: 0;
+    left: -1%;
+    width: 102% !important;
+    height: 75%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .BrushedText {
+    padding: 0 0.5rem;
+    margin: 0 -0.5rem 0 -0.5rem;
+  }
+}
